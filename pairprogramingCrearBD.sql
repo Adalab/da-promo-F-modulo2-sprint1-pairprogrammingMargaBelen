@@ -65,13 +65,18 @@ CREATE TABLE facturas (
             
 		ALTER TABLE empleados
 			CHANGE type salario FLOAT; 
+		
+        ALTER TABLE empleados  -- para que saque los decimales en el salario. 
+		MODIFY salario DOUBLE; -- Opcionalmente, puedes usar DOUBLE en lugar de FLOAT.
             
 		ALTER TABLE clientes
 			DROP column pais;
     
 		ALTER TABLE facturas
 			ADD COLUMN total FLOAT; 
-    
+
+
+
        -- ejercicio 2 
        
        USE tienda_zapatillas;
